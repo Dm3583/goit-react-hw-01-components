@@ -1,8 +1,8 @@
-import React from "react";
-import defaultProfileImg from "./defaultProfile.svg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaultProfileImg from './defaultProfile.svg';
 
 const Profile = ({ name, tag, location, avatar, stats }) => (
-
     <div className="profile">
         <div className="description">
             <img
@@ -33,10 +33,16 @@ const Profile = ({ name, tag, location, avatar, stats }) => (
     </div>
 );
 
-
 Profile.defaultProps = {
-    avatar: defaultProfileImg
-}
+    avatar: defaultProfileImg,
+};
 
+Profile.propTypes = {
+    avatar: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.object.isRequired,
+};
 
 export default Profile;
