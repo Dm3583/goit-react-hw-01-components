@@ -1,0 +1,24 @@
+.transactionHistory {
+    margin: auto;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 50px;
+}
+
+.transactionHistory th {
+    background-color: rgb(121, 216, 245);
+    padding: 10px;
+}
+
+.transactionHistory td {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.transactionHistory tr {
+    background-color: rgb(179, 179, 179);
+}
+
+.transactionHistory tr:nth-child(even) {
+    background-color: rgb(218, 216, 216);
+}
