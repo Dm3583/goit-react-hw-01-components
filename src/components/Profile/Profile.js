@@ -1,36 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultProfileImg from './defaultProfile.svg';
-import ProfileStyles from './Profile.module.css';
+import defaultProfileImg from '../../images/defaultProfile.svg';
+import profileStyles from './Profile.module.css';
 
 const Profile = ({ name, tag, location, avatar, stats }) => (
-    <div className={ProfileStyles.profile}>
+    <div className={profileStyles.profile}>
         <div className="description">
             <img
                 src={avatar}
                 alt="Аватар пользователя"
                 width="320"
-                className={ProfileStyles.avatar}
+                className={profileStyles.avatar}
             />
-            <p className={ProfileStyles.name}>{name}</p>
-            <p className={ProfileStyles.tag}>{tag}</p>
-            <p className={ProfileStyles.location}>{location}</p>
+            <p className={profileStyles.name}>{name}</p>
+            <p className={profileStyles.tag}>{tag}</p>
+            <p className={profileStyles.location}>{location}</p>
         </div>
 
-        <ul className={ProfileStyles.stats}>
+        <ul className={profileStyles.stats}>
             <li>
-                <span className={ProfileStyles.label}>Followers</span>
-                <span className={ProfileStyles.quantity}>
+                <span className={profileStyles.label}>Followers</span>
+                <span className={profileStyles.quantity}>
                     {stats.followers}
                 </span>
             </li>
             <li>
-                <span className={ProfileStyles.label}>Views</span>
-                <span className={ProfileStyles.quantity}>{stats.views}</span>
+                <span className={profileStyles.label}>Views</span>
+                <span className={profileStyles.quantity}>{stats.views}</span>
             </li>
             <li>
-                <span className={ProfileStyles.label}>Likes</span>
-                <span className={ProfileStyles.quantity}>{stats.likes}</span>
+                <span className={profileStyles.label}>Likes</span>
+                <span className={profileStyles.quantity}>{stats.likes}</span>
             </li>
         </ul>
     </div>

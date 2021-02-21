@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes, { shape } from 'prop-types';
-import StatisticsStyles from './Statistics.module.css';
+import statisticsStyles from './Statistics.module.css';
 
 function randomColor() {
     let color = '';
@@ -13,18 +13,18 @@ function randomColor() {
 }
 
 const Statistics = ({ title, stats }) => (
-    <section className={StatisticsStyles.statistics}>
-        {title && <h2 className={StatisticsStyles.title}>{title}</h2>}
+    <section className={statisticsStyles.statistics}>
+        {title && <h2 className={statisticsStyles.title}>{title}</h2>}
 
-        <ul className={StatisticsStyles.statList}>
+        <ul className={statisticsStyles.statList}>
             {stats.map(stat => (
                 <li
-                    className={StatisticsStyles.item}
+                    className={statisticsStyles.item}
                     key={stat.id}
                     style={{ backgroundColor: randomColor() }}
                 >
-                    <span className={StatisticsStyles.label}>{stat.label}</span>
-                    <span className={StatisticsStyles.percentage}>
+                    <span className={statisticsStyles.label}>{stat.label}</span>
+                    <span className={statisticsStyles.percentage}>
                         {stat.percentage}
                     </span>
                 </li>

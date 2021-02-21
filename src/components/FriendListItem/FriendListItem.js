@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultProfileImg from './defaultProfile.svg';
-import FriendListItemStyles from './FriendListItem.module.css';
+import defaultProfileImg from '../../images/defaultProfile.svg';
+import friendListItemStyles from './FriendListItem.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
     const status = isOnline
-        ? FriendListItemStyles.online
-        : FriendListItemStyles.offline;
+        ? friendListItemStyles.online
+        : friendListItemStyles.offline;
     return (
-        <li className={FriendListItemStyles.item}>
+        <li className={friendListItemStyles.item}>
             <span className={status}></span>
             <img
-                className={FriendListItemStyles.avatar}
+                className={friendListItemStyles.avatar}
                 src={avatar}
                 alt={name}
                 width="48"
             />
-            <p className={FriendListItemStyles.name}>{name}</p>
+            <p className={friendListItemStyles.name}>{name}</p>
         </li>
     );
 };
